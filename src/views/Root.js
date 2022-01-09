@@ -1,5 +1,10 @@
-function Root() {
-  return <div className="App">Basic app with config</div>;
-}
+import React from 'react';
+import UsersList from 'components/UsersList/UsersList';
+
+const Root = () => (
+  <>
+    <UsersList />
+  </>
+);
 
 export default Root;
