@@ -1,19 +1,15 @@
 {
-  "extends": [
-    "react-app",
-    "react-app/jest",
-    "plugin:prettier/recommended",
-    "prettier"
-  ],
+  "extends": ["react-app", "react-app/jest", "plugin:prettier/recommended", "prettier"],
 
   "plugins": ["prettier"],
 
   "rules": {
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "singleQuote": true,
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "printWidth": 80
       }
     ]
     // "import/first": 0
