@@ -9,7 +9,7 @@
       {
         "singleQuote": true,
         "endOfLine": "auto",
-        "printWidth": 80
+        "printWidth": 150
       }
     ]
     // "import/first": 0

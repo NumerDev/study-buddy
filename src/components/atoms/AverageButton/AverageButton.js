@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from './AverageButton.styles';
+import { StyledAverage } from './AverageButton.styles';
 
-const AverageButton = ({ avg }) => <Button avg={avg}>{avg}</Button>;
+const AverageButton = ({ avg }) => <StyledAverage avg={avg}>{avg}</StyledAverage>;
 
 AverageButton.propTypes = {
   avg: PropTypes.string,
