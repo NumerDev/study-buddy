@@ -7,7 +7,7 @@ import { Wrapper } from './Root.styles';
 import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import { users as usersData } from 'data/users';
-import NavBar from 'components/molecules/NavBar/NavBar';
+import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 
 const initialFormState = {
   name: '',
@@ -47,16 +47,17 @@ const Root = () => {
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Wrapper>
-          <NavBar />
-          <Switch>
-            <Route path="" element={<UsersList deleteUser={deleteUser} users={users} />}></Route>
-            <Route
-              path="add-user"
-              element={<Form formValues={formValues} handleAddUser={handleAddUser} handleInputChange={handleInputChange} />}
-            ></Route>
-          </Switch>
-        </Wrapper>
+        <MainTemplate>
+          <Wrapper>
+            <Switch>
+              <Route path="" element={<UsersList deleteUser={deleteUser} users={users} />}></Route>
+              <Route
+                path="add-user"
+                element={<Form formValues={formValues} handleAddUser={handleAddUser} handleInputChange={handleInputChange} />}
+              ></Route>
+            </Switch>
+          </Wrapper>
+        </MainTemplate>
       </ThemeProvider>
     </Router>
   );

@@ -2,15 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const StyledNavBar = styled.nav`
-  width: 110px;
+  width: 100%;
   height: 100vh;
   border-right: 1px solid ${({ theme }) => theme.colors.borderGray};
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   padding: 30px 0;
-  position: absolute;
-  left: 0;
 `;
 
 export const Logo = styled.div`
@@ -19,7 +17,7 @@ export const Logo = styled.div`
   font-size: 15px;
   width: 100%;
   height: 60px;
-  padding: 13px 15px 13px 44px;
+  padding: 13px 15px 13px 54px;
   font-weight: bold;
   margin-bottom: 30px;
 `;
