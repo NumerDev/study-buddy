@@ -4,9 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/Theme';
 import { Wrapper } from './Root.styles';
-import { BrowserRouter as Router, Routes as Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import { users as usersData } from 'data/users';
+import NavBar from 'components/molecules/NavBar/NavBar';
 
 const initialFormState = {
   name: '',
@@ -47,10 +48,7 @@ const Root = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Wrapper>
-          <nav>
-            <Link to="add-user">Add User</Link>
-            <Link to="">Users</Link>
-          </nav>
+          <NavBar />
           <Switch>
             <Route path="" element={<UsersList deleteUser={deleteUser} users={users} />}></Route>
             <Route
