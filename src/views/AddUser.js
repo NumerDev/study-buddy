@@ -4,7 +4,7 @@ import FormField from 'components/molecules/FormField/FormField';
 import { Button } from 'components/atoms/Button/Button';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 
-const Form = ({ handleAddUser, formValues, handleInputChange }) => {
+const AddUser = ({ handleAddUser, formValues, handleInputChange }) => {
   return (
     <>
       <ViewWrapper as="form" onSubmit={handleAddUser}>
@@ -18,4 +18,4 @@ const Form = ({ handleAddUser, formValues, handleInputChange }) => {
   );
 };
 
-export default Form;
+export default AddUser;

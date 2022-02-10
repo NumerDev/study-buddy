@@ -8,7 +8,8 @@ const NavBar = () => {
         <Logo>Study Buddy</Logo>
 
         <StyledLink to="/">Dashboard</StyledLink>
-        <StyledLink to="add-user">Settings</StyledLink>
+        <StyledLink to="add-user">Add user</StyledLink>
+        <StyledLink to="/">Settings</StyledLink>
         <StyledLink to="/">Logout</StyledLink>
       </StyledNavBar>
     </>

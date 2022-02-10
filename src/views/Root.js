@@ -4,7 +4,7 @@ import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/Theme';
 import { Wrapper } from './Root.styles';
 import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
-import Form from 'components/organisms/Form/Form';
+import AddUser from './AddUser';
 import { users as usersData } from 'data/users';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import Dashboard from './Dashboard';
@@ -53,7 +53,7 @@ const Root = () => {
               <Route path="" element={<Dashboard deleteUser={deleteUser} users={users} />}></Route>
               <Route
                 path="add-user"
-                element={<Form formValues={formValues} handleAddUser={handleAddUser} handleInputChange={handleInputChange} />}
+                element={<AddUser formValues={formValues} handleAddUser={handleAddUser} handleInputChange={handleInputChange} />}
               ></Route>
             </Switch>
           </Wrapper>
