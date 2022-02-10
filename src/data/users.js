@@ -5,17 +5,17 @@ export const users = [
     average: '2.2',
   },
   {
-    name: 'Zdzichu Waligóra',
+    name: 'Jan Nowak',
     attendance: '40%',
     average: '2.1',
   },
   {
-    name: 'Stasiu Wiercipała',
+    name: 'Stasiu Kowalski',
     attendance: '88%',
     average: '3.6',
   },
   {
-    name: 'Tomasz Moczywór',
+    name: 'Tomasz Kamień',
     attendance: '29%',
     average: '4.0',
   },
