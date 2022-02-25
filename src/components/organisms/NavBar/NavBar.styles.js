@@ -9,6 +9,8 @@ export const StyledNavBar = styled.nav`
   justify-content: flex-start;
   flex-direction: column;
   padding: 30px 0;
+  grid-row: 1 / 3;
+  grid-column: 1 / 1;
 `;
 
 export const Logo = styled.div`
