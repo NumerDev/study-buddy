@@ -30,7 +30,6 @@ const NewsSection = () => {
           headers: {
             authorization: `Bearer ${process.env.REACT_APP_DATOCMS_TOKEN}`,
           },
-          withCredentials: false,
         }
       )
       .then(({ data: { data } }) => setArticles(data.allArticles))
@@ -42,8 +41,8 @@ const NewsSection = () => {
       <NewsHeader>University feed section</NewsHeader>
 
       {articles.length > 0 ? (
-        articles.map(({ title, category, content, image }) => (
-          <ArticleWrapper key={title}>
+        articles.map(({ id, title, category, content, image = null }) => (
+          <ArticleWrapper key={id}>
             <TitleWrapper>
               <h3>{title}</h3>
               <p>{category}</p>
