@@ -4,6 +4,7 @@
   "plugins": ["prettier"],
 
   "rules": {
+    "jsx-a11y/img-redundant-alt": "off",
     "prettier/prettier": [
       "warn",
       {
