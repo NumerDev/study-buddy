@@ -13,7 +13,7 @@ export const UsersProvider = ({ children }) => {
   useEffect(() => {
     axios
       .get('/students')
-      .then((data) => console.log(data))
+      .then(({ data }) => setUsers(data.students))
       .catch((err) => console.log(err));
   }, []);
 
