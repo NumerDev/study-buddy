@@ -4,7 +4,7 @@
 
 This project which I'm currently developing is from react course created by <a href="https://github.com/helloroman">hello roman</a>.
 The main idea behind this project was to learn React and create more complex project than basic landing page instead of learning single features 
-of this library/framework. I know Angular framework already but i wanted to try React as well and It contains react basics, react hooks, basic of unit/integration testing and automation testing in Cypress, basics of redux 
+of this library/framework. I know Angular framework already but i wanted to try React as well. This project contains react basics, react hooks, basic of unit/integration testing and automation testing in Cypress, basics of redux 
 and much much more...
 
 ### Design
