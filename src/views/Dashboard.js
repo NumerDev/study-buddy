@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 import UsersList from 'components/organisms/UsersList/UsersList';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const [students, setStudents] = useState([]);
@@ -15,22 +14,22 @@ const Dashboard = () => {
       .get('/groups')
       .then(({ data }) => setGroups(data.groups))
       .catch((err) => console.log(err));
-  }, [groups]);
+  }, []);
 
   useEffect(() => {
     axios
-      .get(`/students/${id}`)
+      .get(`/students/${id || groups[0]}`)
       .then(({ data }) => setStudents(data.students))
       .catch((err) => console.log(err));
-  }, [id]);
+  }, [id, groups]);
 
   return (
     <ViewWrapper>
       <nav>
         {groups.map((group) => (
-          <Navigate key={group} to={`/group/${group}`}>
-            {group}{' '}
-          </Navigate>
+          <Link key={group} to={`/group/${group}`}>
+            {group}
+          </Link>
         ))}
       </nav>
       <UsersList users={students} />
