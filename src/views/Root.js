@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-d
 import AddUser from './AddUser';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import Dashboard from './Dashboard';
-import UsersProvider from 'providers/UsersProvider';
+import { Navigate } from 'react-router-dom';
 
 const Root = () => {
   return (
@@ -15,14 +15,16 @@ const Root = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <MainTemplate>
-          <UsersProvider>
-            <Wrapper>
-              <Switch>
-                <Route path="" element={<Dashboard />}></Route>
-                <Route path="add-user" element={<AddUser />}></Route>
-              </Switch>
-            </Wrapper>
-          </UsersProvider>
+          <Wrapper>
+            <Switch>
+              <Route exact path="/" element={<Navigate to="group" />} />
+              <Route path="group" element={<Dashboard />}>
+                <Route path=":id" element={<Dashboard />} />
+                <Route path="" element={<Dashboard />} />
+              </Route>
+              <Route path="add-user" element={<AddUser />} />
+            </Switch>
+          </Wrapper>
         </MainTemplate>
       </ThemeProvider>
     </Router>
