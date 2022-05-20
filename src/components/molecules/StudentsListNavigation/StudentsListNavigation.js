@@ -27,7 +27,7 @@ const StudentsListNavigation = ({ group }) => {
           <p>Group</p>
           {groups.map((group) => {
             return (
-              <DialogLink onClick={() => toggleModal()} to={`${group}`}>
+              <DialogLink key={group} onClick={() => toggleModal()} to={`${group}`}>
                 {group}
               </DialogLink>
             );
