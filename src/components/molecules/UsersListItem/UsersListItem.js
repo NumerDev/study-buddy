@@ -7,11 +7,11 @@ import UserInfo from 'components/atoms/UserInfo/UserInfo';
 import { UserShape } from 'types';
 import { UsersContext } from 'providers/UsersProvider';
 
-const UsersListItem = ({ userData: { name, average, attendance = '0%' } }) => {
+const UsersListItem = ({ userData: { name, average, attendance = '0%' }, ...props }) => {
   const { deleteUser } = useContext(UsersContext);
 
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <AverageButton avg={average} />
       <UserInfo name={name} attendance={attendance} />
       <DeleteButton onClick={() => deleteUser(name)} />
